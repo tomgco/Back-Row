@@ -1,0 +1,3 @@
+This is currently a playground for an up and coming project named Back Row.
+
+At the moment all this will be achieving will be loading in the iTunes Library in the most efficant way. It is currently using Grand Central Dispatch for multithreading.
