@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E218563813DDB0CB000314AF /* iTunesLibrayLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E218563713DDB0CB000314AF /* iTunesLibrayLoader.m */; };
+		E292399213DDC6DD006DFA49 /* iTunesLibraryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E292399113DDC6DD006DFA49 /* iTunesLibraryParser.m */; };
 		E2BB8EC213DDB07400F70562 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2BB8EC113DDB07400F70562 /* Cocoa.framework */; };
 		E2BB8ECC13DDB07400F70562 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2BB8ECA13DDB07400F70562 /* InfoPlist.strings */; };
 		E2BB8ECE13DDB07400F70562 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2BB8ECD13DDB07400F70562 /* main.m */; };
@@ -31,22 +33,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E218563613DDB0CB000314AF /* iTunesLibrayLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iTunesLibrayLoader.h; path = Classes/iTunesLibrayLoader.h; sourceTree = "<group>"; };
+		E218563713DDB0CB000314AF /* iTunesLibrayLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iTunesLibrayLoader.m; path = Classes/iTunesLibrayLoader.m; sourceTree = "<group>"; };
+		E292399013DDC6DD006DFA49 /* iTunesLibraryParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iTunesLibraryParser.h; path = Classes/iTunesLibraryParser.h; sourceTree = "<group>"; };
+		E292399113DDC6DD006DFA49 /* iTunesLibraryParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iTunesLibraryParser.m; path = Classes/iTunesLibraryParser.m; sourceTree = "<group>"; };
 		E2BB8EBD13DDB07400F70562 /* Back Row.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Back Row.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BB8EC113DDB07400F70562 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E2BB8EC413DDB07400F70562 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		E2BB8EC513DDB07400F70562 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E2BB8EC613DDB07400F70562 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		E2BB8EC913DDB07400F70562 /* Back Row-Info.plist */ = {isa = PBXFileReference; path = "Back Row-Info.plist"; sourceTree = "<group>"; };
+		E2BB8EC913DDB07400F70562 /* Back Row-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Back Row-Info.plist"; sourceTree = "<group>"; };
 		E2BB8ECB13DDB07400F70562 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E2BB8ECD13DDB07400F70562 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E2BB8ECF13DDB07400F70562 /* Back Row-Prefix.pch */ = {isa = PBXFileReference; path = "Back Row-Prefix.pch"; sourceTree = "<group>"; };
+		E2BB8ECF13DDB07400F70562 /* Back Row-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Back Row-Prefix.pch"; sourceTree = "<group>"; };
 		E2BB8ED113DDB07400F70562 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		E2BB8ED313DDB07400F70562 /* Back_RowAppDelegate.h */ = {isa = PBXFileReference; path = Back_RowAppDelegate.h; sourceTree = "<group>"; };
+		E2BB8ED313DDB07400F70562 /* Back_RowAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Back_RowAppDelegate.h; sourceTree = "<group>"; };
 		E2BB8ED413DDB07400F70562 /* Back_RowAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Back_RowAppDelegate.m; sourceTree = "<group>"; };
 		E2BB8ED713DDB07400F70562 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E2BB8EDE13DDB07400F70562 /* Back RowTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Back RowTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BB8EDF13DDB07400F70562 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		E2BB8EE613DDB07400F70562 /* Back RowTests-Info.plist */ = {isa = PBXFileReference; path = "Back RowTests-Info.plist"; sourceTree = "<group>"; };
+		E2BB8EE613DDB07400F70562 /* Back RowTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Back RowTests-Info.plist"; sourceTree = "<group>"; };
 		E2BB8EE813DDB07400F70562 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E2BB8EEA13DDB07400F70562 /* Back_RowTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Back_RowTests.h; sourceTree = "<group>"; };
 		E2BB8EEC13DDB07400F70562 /* Back_RowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Back_RowTests.m; sourceTree = "<group>"; };
@@ -73,6 +79,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E218563413DDB0A5000314AF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E218563613DDB0CB000314AF /* iTunesLibrayLoader.h */,
+				E218563713DDB0CB000314AF /* iTunesLibrayLoader.m */,
+				E292399013DDC6DD006DFA49 /* iTunesLibraryParser.h */,
+				E292399113DDC6DD006DFA49 /* iTunesLibraryParser.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		E2BB8EB213DDB07300F70562 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +132,7 @@
 		E2BB8EC713DDB07400F70562 /* Back Row */ = {
 			isa = PBXGroup;
 			children = (
+				E218563413DDB0A5000314AF /* Classes */,
 				E2BB8ED313DDB07400F70562 /* Back_RowAppDelegate.h */,
 				E2BB8ED413DDB07400F70562 /* Back_RowAppDelegate.m */,
 				E2BB8ED613DDB07400F70562 /* MainMenu.xib */,
@@ -261,6 +279,8 @@
 			files = (
 				E2BB8ECE13DDB07400F70562 /* main.m in Sources */,
 				E2BB8ED513DDB07400F70562 /* Back_RowAppDelegate.m in Sources */,
+				E218563813DDB0CB000314AF /* iTunesLibrayLoader.m in Sources */,
+				E292399213DDC6DD006DFA49 /* iTunesLibraryParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +452,7 @@
 				E2BB8EF213DDB07400F70562 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2BB8EF313DDB07400F70562 /* Build configuration list for PBXNativeTarget "Back RowTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +461,7 @@
 				E2BB8EF513DDB07400F70562 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

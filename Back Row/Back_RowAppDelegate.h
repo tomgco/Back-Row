@@ -10,8 +10,13 @@
 
 @interface Back_RowAppDelegate : NSObject <NSApplicationDelegate> {
 	NSWindow *window;
+	NSDictionary *itunesLibrary;
+	IBOutlet NSTextField *label;
 }
 
 @property (assign) IBOutlet NSWindow *window;
+@property (nonatomic, retain) NSDictionary *itunesLibrary;
+
+- (void)loadLibrary;
 
 @end
