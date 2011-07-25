@@ -7,7 +7,7 @@
 //
 
 #import "Back_RowAppDelegate.h"
-#import "iTunesLibrayLoader.h"
+#import "iTunesLibraryParser.h"
 #import <dispatch/dispatch.h>
 
 @implementation Back_RowAppDelegate
@@ -22,22 +22,14 @@
 //Loads the iTunes Library data on a seperate thread.
 - (void)loadLibrary {
 	dispatch_queue_t queue = dispatch_get_global_queue(0,0);
-	dispatch_queue_t main = dispatch_get_main_queue();
 	
 	dispatch_async(queue, ^{
-		iTunesLibrayLoader *library = [[iTunesLibrayLoader alloc] init];
-		NSDictionary* loadedLibrary = [library loadLibrary:nil];
-		[library release];
-		
-		dispatch_async(main, ^{
-			[label setStringValue:@"Loaded iTunes File."];
-			itunesLibrary = [NSDictionary dictionaryWithDictionary:[loadedLibrary objectForKey:@"Tracks"]];
-			[loadedLibrary release];
-			NSLog(@"%@", itunesLibrary);
-		});
+		iTunesLibraryParser *parser = [[iTunesLibraryParser alloc] init];
+		itunesLibrary = [[NSDictionary alloc] initWithDictionary:[parser getTVShows]];
+		[parser release];
 	});
+	
 	dispatch_release(queue);
-	dispatch_release(main);
 }
 
 @end

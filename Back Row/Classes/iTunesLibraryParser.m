@@ -10,39 +10,47 @@
 #import "iTunesLibrayLoader.h"
 #import <dispatch/dispatch.h>
 
+#define TVSHOW 1
+
 @implementation iTunesLibraryParser
 
-@synthesize loadedLibrary;
+@synthesize loadedLibrary, tvShows;
 
 - (id)init
 {
     self = [super init];
     if (self) {
-			dispatch_queue_t queue = dispatch_get_global_queue(0,0);
-			
-			dispatch_async(queue, ^{
-				iTunesLibrayLoader *library = [[iTunesLibrayLoader alloc] init];
-				loadedLibrary = [NSMutableDictionary dictionaryWithDictionary:[[library loadLibrary:nil] objectForKey:@"Tracks"]];
-				[library release];
-			});
-			dispatch_release(queue);
+			iTunesLibrayLoader *library = [[iTunesLibrayLoader alloc] init];
+			loadedLibrary = [[NSMutableDictionary alloc] initWithDictionary:[[library loadLibrary:nil] objectForKey:@"Tracks"]];
+			[library release];
+			tvShows = [[NSMutableDictionary alloc] init];
     }
     
     return self;
 }
 
-- (void) getTVShows {
-	NSUInteger count = [loadedLibrary count];
-	dispatch_queue_t queue = dispatch_get_global_queue(0,0);
-	
-	dispatch_apply(count, queue, ^(size_t i){
-		id key = [[loadedLibrary allKeys] objectAtIndex:i];
+- (NSDictionary*) getTVShows {
+	for (id key in loadedLibrary) {
 		id object = [loadedLibrary objectForKey:key];
-		int number = [[object valueForKey:@"TV Show"] intValue];
-		if (number == 1) {
-			NSLog(@"%@", [object valueForKey:@"Artist"]);
+		int mediaType = [[object valueForKey:@"TV Show"] intValue];
+		if (mediaType == TVSHOW) {
+			if ([tvShows objectForKey:[object valueForKey:@"Series"]] == nil) {
+				NSMutableArray* showArray = [[NSMutableArray alloc] init];
+				[showArray addObject:object];
+				[tvShows setObject:showArray forKey:[object valueForKey:@"Series"]];
+				[showArray release];
+			} else {
+				[[tvShows objectForKey:[object valueForKey:@"Series"]] addObject:object];
+			}
 		}
-	});
+	}
+	return tvShows;
+}
+
+- (void)dealloc {
+	[tvShows release];
+	[loadedLibrary release];
+	[super dealloc];
 }
 
 @end

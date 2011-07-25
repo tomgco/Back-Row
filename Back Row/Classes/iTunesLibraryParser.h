@@ -10,10 +10,12 @@
 
 @interface iTunesLibraryParser : NSObject {
 	NSMutableDictionary* loadedLibrary;
+	NSMutableDictionary* tvShows;
 }
 
-- (void) getTVShows;
+- (NSDictionary*) getTVShows;
 
 @property(nonatomic, retain) NSMutableDictionary* loadedLibrary;
+@property(nonatomic, retain) NSMutableDictionary* tvShows;
 
 @end
